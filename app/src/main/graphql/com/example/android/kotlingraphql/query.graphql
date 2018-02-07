@@ -1,0 +1,8 @@
+query MovieQuery {
+  allMovies{
+    id
+    title
+    overview
+    imageUrl
+  }  
+}
