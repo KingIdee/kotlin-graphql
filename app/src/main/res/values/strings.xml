@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kotlin GraphQL</string>
+    <string name="com_auth0_client_id">kWiAFYXZ0G5F0uAKmjqIEgzc5NjaLdJI</string>
+    <string name="com_auth0_domain">idee.auth0.com</string>
 </resources>

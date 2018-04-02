@@ -1,8 +1,8 @@
 package com.example.android.kotlingraphql
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
 import android.util.Log
 import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.ApolloClient
@@ -10,7 +10,6 @@ import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
-import android.support.v7.widget.GridLayoutManager
 
 class MainActivity : AppCompatActivity() {
 

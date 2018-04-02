@@ -15,9 +15,9 @@ import java.util.*
 
 class MoviesAdapter(private var movieList: List<MovieQuery.AllMovie>) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val view = LayoutInflater.from(parent!!.context).inflate(R.layout.single_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.single_item,parent,false)
         return ViewHolder(view)
     }
 
@@ -25,9 +25,9 @@ class MoviesAdapter(private var movieList: List<MovieQuery.AllMovie>) : Recycler
         return movieList.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val current = movieList[position]
-        holder!!.movieTextview.text = current.title()
+        holder.movieTextview.text = current.title()
         Glide.with(holder.itemView).load(current.imageUrl).into(holder.movieImage)
 
     }
