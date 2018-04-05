@@ -4,7 +4,6 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import android.support.annotation.NonNull
 import com.auth0.android.Auth0
 import com.auth0.android.authentication.AuthenticationException
 import com.auth0.android.provider.AuthCallback
@@ -33,7 +32,7 @@ class LoginActivity : Activity() {
                     override fun onSuccess(credentials: Credentials) {
                         // Store credentials
                         // Navigate to your main activity
-                        startActivity(Intent(this@LoginActivity,MainActivity::class.java))
+                        startActivity(Intent(this@LoginActivity,MoviesListActivity::class.java))
                     }
                 })
     }

@@ -5,5 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/recyclerView"
-    tools:listitem="@layout/single_item"
-    tools:context="com.example.android.kotlingraphql.MainActivity"/>
+    tools:listitem="@layout/single_item_movie_list"
+    tools:context="com.example.android.kotlingraphql.MoviesListActivity"/>

@@ -4,5 +4,10 @@ query MovieQuery {
     title
     overview
     imageUrl
-  }  
+    reviews {
+      id
+      author
+      content
+    }
+  }
 }
