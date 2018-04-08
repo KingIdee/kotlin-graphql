@@ -1,0 +1,8 @@
+query ReviewQuery($id:ID!) {
+  Movie (id:$id){
+    reviews {
+      author
+      content
+    }
+  }
+}

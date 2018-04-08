@@ -21,7 +21,11 @@
         <activity android:name=".LoginActivity">
 
         </activity>
-        <activity android:name=".MovieDetailsActivity"></activity>
+        <activity android:name=".MovieDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MoviesListActivity" />
+        </activity>
     </application>
 
 </manifest>

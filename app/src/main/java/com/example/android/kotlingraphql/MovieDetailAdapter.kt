@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 
-class MovieDetailAdapter(/*private var movieList: List<ReviewQuery.AllReview>*/) : RecyclerView.Adapter<MovieDetailAdapter.ViewHolder>() {
+class MovieDetailAdapter(private var reviewList: List<ReviewQuery.Review>) : RecyclerView.Adapter<MovieDetailAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -16,20 +16,18 @@ class MovieDetailAdapter(/*private var movieList: List<ReviewQuery.AllReview>*/)
     }
 
     override fun getItemCount(): Int {
-        return 0
+        return reviewList.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        //holder.bindView(movieList[position])
+        holder.bindView(reviewList[position])
     }
 
     inner class ViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView) {
 
-        //var movieTextview: TextView = itemView!!.findViewById(R.id.movie_title)
-        //var movieImage: ImageView = itemView!!.findViewById(R.id.movie_image)
-        /*fun bindView(currentMovie: ReviewQuery.AllReview) = with(itemView){
-            *//*Glide.with(this).load(currentMovie.imageUrl).into(movieImage)
-            movieTextview.text = currentMovie.title*//*
-        }*/
+        var reviewContent: TextView = itemView!!.findViewById(R.id.review_content)
+        fun bindView(currentReview: ReviewQuery.Review) = with(itemView){
+            reviewContent.text = currentReview.content
+        }
     }
 }

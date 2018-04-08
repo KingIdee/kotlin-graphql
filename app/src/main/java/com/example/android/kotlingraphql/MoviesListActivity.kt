@@ -12,6 +12,7 @@ import com.apollographql.apollo.exception.ApolloException
 import kotlinx.android.synthetic.main.activity_movies_list.*
 import okhttp3.OkHttpClient
 
+
 class MoviesListActivity : AppCompatActivity(), MoviesListAdapter.MovieOnClick {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +55,10 @@ class MoviesListActivity : AppCompatActivity(), MoviesListAdapter.MovieOnClick {
 
     private fun setupRecyclerView(list: List<MovieQuery.AllMovie>) {
         val adapter = MoviesListAdapter(list,this)
-        recyclerView.layoutManager= GridLayoutManager(this, 2)
-        recyclerView.adapter = adapter
+        with(recyclerView){
+            layoutManager= GridLayoutManager(this@MoviesListActivity, 2)
+            recyclerView.adapter = adapter
+        }
     }
-
 
 }
